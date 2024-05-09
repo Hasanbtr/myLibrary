@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Yükle</title>
+</head>
+<body>
+    <h1>Kitap Yükle</h1>
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <label for="title">Kitap Adı:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="author">Yazar:</label>
+        <input type="text" id="author" name="author"><br><br>
+
+        <label for="cover_photo">Kapak Fotoğrafı:</label>
+        <input type="file" id="cover_photo" name="cover_photo" accept="image/*"><br><br> <!-- Kapak fotoğrafı için dosya yükleme alanı -->
+
+        <label for="pdf_file">PDF Dosyası:</label>
+        <input type="file" id="pdf_file" name="pdf_file" accept=".pdf"><br><br>
+
+        <input type="submit" value="Yükle">
+    </form>
+</body>
+</html>
